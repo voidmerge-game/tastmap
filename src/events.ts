@@ -33,16 +33,18 @@ export const LABELS:LabelEv[]=[];
 export const LIGHT_LABELS=new Set(['Kingdom of the Two Sicilies','Austrian Empire','Austria-Hungary','France']);
 export type BigEv={lon:number;lat:number;text:string;t:number;until?:number;size?:number;rot?:number;minScale?:number;fit?:any;fitKey?:[string,string];label?:string};
 const fit=(era:string,name:string)=>((LABEL_POS as any)[era]?.[name]??null);
-const big=(era:string,name:string,text:string,t:number,until:number,minScale=0):BigEv=>{const f=fit(era,name);return {lon:f?.lon??12.5,lat:f?.lat??42.5,text,t,until,minScale,fit:f,fitKey:[era,name],size:40};};
+const SHORT_LABEL:Record<string,string>={'Kingdom of Sardinia':'SARDINIA','Lombardy–Venetia':'LOMBARDY VENETIA','Duchy of Parma':'PARMA','Duchy of Modena':'MODENA','Grand Duchy of Tuscany':'TUSCANY','Papal States':'PAPAL STATES','Kingdom of the Two Sicilies':'TWO SICILIES','Austrian Empire':'AUSTRIAN EMPIRE','Kingdom of Italy':'KINGDOM OF ITALY'};
+const big=(era:string,name:string,text:string,t:number,until:number,minScale=0):BigEv=>{const f=fit(era,name);return {lon:f?.lon??12.5,lat:f?.lat??42.5,text,label:SHORT_LABEL[name]??text,t,until,minScale,fit:f,fitKey:[era,name],size:40};};
+const END_1815_LAYER=T('S3_01','proclaimed');
 export const BIG:BigEv[]=[
- big('1815','Kingdom of Sardinia','KINGDOM OF SARDINIA',T('S1_01','Sardinia'),E('S1_01')),
- big('1815','Lombardy–Venetia','LOMBARDY–VENETIA',T('S1_01','Lombardy'),E('S1_01')),
- big('1815','Duchy of Parma','DUCHY OF PARMA',T('S1_01','Parma'),E('S1_01')),
- big('1815','Duchy of Modena','DUCHY OF MODENA',T('S1_01','Modena'),E('S1_01')),
- big('1815','Grand Duchy of Tuscany','TUSCANY',T('S1_01','Tuscany'),E('S1_01')),
- big('1815','Papal States','PAPAL STATES',T('S1_01','pope'),E('S1_01')),
- big('1815','Kingdom of the Two Sicilies','TWO SICILIES',T('S1_01','Naples'),E('S1_01')),
- big('1815','Austrian Empire','AUSTRIAN EMPIRE',T('S1_01','Austria'),E('S1_01')),
+ big('1815','Kingdom of Sardinia','KINGDOM OF SARDINIA',T('S1_01','Sardinia'),END_1815_LAYER),
+ big('1815','Lombardy–Venetia','LOMBARDY–VENETIA',T('S1_01','Lombardy'),END_1815_LAYER),
+ big('1815','Duchy of Parma','DUCHY OF PARMA',T('S1_01','Parma'),END_1815_LAYER),
+ big('1815','Duchy of Modena','DUCHY OF MODENA',T('S1_01','Modena'),END_1815_LAYER),
+ big('1815','Grand Duchy of Tuscany','TUSCANY',T('S1_01','Tuscany'),END_1815_LAYER),
+ big('1815','Papal States','PAPAL STATES',T('S1_01','pope'),END_1815_LAYER),
+ big('1815','Kingdom of the Two Sicilies','TWO SICILIES',T('S1_01','Naples'),END_1815_LAYER),
+ big('1815','Austrian Empire','AUSTRIAN EMPIRE',T('S1_01','Austria'),END_1815_LAYER),
  big('1871','Kingdom of Italy','KINGDOM OF ITALY',T('S3_01','proclaimed'),E('S3_02')),
 ];
 export type CityEv={lon:number;lat:number;name:string;minScale?:number;capital?:boolean;side?:'r'|'l'|'b'|'t';t?:number;until?:number};
@@ -88,13 +90,13 @@ export const yearAt=(t:number)=>{let y='1815';for(const [a,b] of YEARS)if(t>=a)y
 const K=(t:number,lon:number,lat:number,ppd:number):CamKey=>({t,lon,lat,scale:Math.round(ppd*57.2958)});
 export const CAM5:CamKey[]=[
  {t:0,lon:10,lat:42,scale:440},{t:COLD_OPEN.quote,lon:10,lat:42,scale:440},
- K(FIRST_VO+0.5,14,42,24),K(T('S1_01','Sardinia'),7.7,44.8,44),K(T('S1_01','Lombardy'),10,45.6,58),
- K(T('S1_01','Parma'),10.3,44.8,55),K(T('S1_01','Tuscany'),11.1,43.1,52),K(T('S1_01','pope'),12.5,41.8,58),
- K(T('S1_01','Naples'),14,40.5,52),K(T('S1_02','Milan'),9.2,45.5,58),K(T('S1_02','Venice'),12.3,45.4,58),
- K(T('S2_01','Cavour'),7.6,45.1,62),K(T('S2_01','Solferino'),10.56,45.37,66),K(T('S2_01','Lombardy'),10,45.5,48),
- K(T('S2_02','Quarto'),8.99,44.39,62),K(T('S2_02','Marsala'),12.44,37.8,62),K(T('S2_02','Naples'),14.27,40.85,60),
- K(T('S3_01','proclaimed'),12,42.5,28),K(T('S3_01','Venetia'),12.3,45.4,48),K(T('S3_02','Rome'),12.5,41.9,68),
- K(T('S3_02','capital'),12,42,30),{t:END_VO+1.5,lon:12,lat:42,scale:470},{t:TOTAL,lon:12,lat:42,scale:440},
+ K(FIRST_VO+0.5,14,42,24),K(T('S1_01','Sardinia'),7.7,44.8,90),K(T('S1_01','Lombardy'),10,45.6,165),
+ K(T('S1_01','Parma'),10.3,44.8,150),K(T('S1_01','Tuscany'),11.1,43.1,140),K(T('S1_01','pope'),12.5,41.8,120),
+ K(T('S1_01','Naples'),14,40.5,90),K(T('S1_02','Milan'),9.2,45.5,160),K(T('S1_02','Venice'),12.3,45.4,160),
+ K(T('S2_01','Cavour'),7.6,45.1,100),K(T('S2_01','Solferino'),10.56,45.37,150),K(T('S2_01','Lombardy'),10,45.5,140),
+ K(T('S2_02','Quarto'),8.99,44.39,90),K(T('S2_02','Marsala'),12.44,37.8,90),K(T('S2_02','Naples'),14.27,40.85,100),
+ K(T('S3_01','proclaimed'),12,42.5,40),K(T('S3_01','Venetia'),12.3,45.4,150),K(T('S3_02','Rome'),12.5,41.9,100),
+ K(T('S3_02','capital'),12,42,42),{t:END_VO+1.5,lon:12,lat:42,scale:470},{t:TOTAL,lon:12,lat:42,scale:440},
 ];
 const HOLD=(keys:CamKey[]):CamKey[]=>{const out:CamKey[]=[];for(let i=0;i<keys.length;i++){const a=keys[i],b=keys[i+1];out.push(a);if(!b)break;const dist=Math.hypot(b.lon-a.lon,b.lat-a.lat)+12*Math.abs(Math.log(b.scale/a.scale));const travel=Math.min(2.4,Math.max(1,0.8+0.05*dist));if(b.t-a.t>travel+.4&&a.scale>500)out.push({...a,t:b.t-travel});}return out;};
 export const CAM4=HOLD(CAM5);
