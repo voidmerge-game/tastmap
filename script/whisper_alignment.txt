@@ -1,0 +1,6 @@
+S1_01: 46 words / 23.8 s
+S1_02: 47 words / 23.41 s
+S2_01: 49 words / 22.94 s
+S2_02: 49 words / 23.72 s
+S3_01: 49 words / 22.67 s
+S3_02: 49 words / 24.01 s

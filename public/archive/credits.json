@@ -1,0 +1,30 @@
+[
+  {
+    "id": "File:Cavour-portrait-01.jpg",
+    "file": "archive/cavour.jpg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cavour-portrait-01.jpg",
+    "artist": "Unknown author; portrait before 1867"
+  },
+  {
+    "id": "File:Garibaldi (1866).jpg",
+    "file": "archive/garibaldi.jpg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Garibaldi_(1866).jpg",
+    "artist": "Fratelli Alinari"
+  },
+  {
+    "id": "File:King Victor Emmanuel II of Italy.jpg",
+    "file": "archive/victor_emmanuel_ii.jpg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Victor_Emmanuel_II_of_Italy.jpg",
+    "artist": "Cesare Campini"
+  },
+  {
+    "id": "File:Venise, Panorama du Grand Canal, 1896.webm",
+    "file": "archive/clips/venice_1896.mp4",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Venise,_Panorama_du_Grand_Canal,_1896.webm",
+    "artist": "Alexandre Promio"
+  }
+]

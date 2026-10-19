@@ -1,0 +1,18 @@
+import paragraphsRaw from '../public/audio/vo/paragraphs.json';
+export type Word={w:string;s:number;e:number};
+export type Para={id:string;file:string;duration:number;text:string;words:Word[];start:number};
+const GAP_PARA=0.5, GAP_SCENE=0.8;
+const BEFORE:Record<string,number>={S3_02:6.5};
+export const COLD_OPEN={quote:4.0,title:5.0};
+export const FIRST_VO=COLD_OPEN.quote+COLD_OPEN.title;
+export const PARAS:Para[]=(()=>{let t=FIRST_VO,prev='';const out:Para[]=[];(paragraphsRaw as any[]).forEach((p)=>{const scene=p.id.split('_')[0];if(out.length)t+=scene===prev?GAP_PARA:GAP_SCENE;t+=BEFORE[p.id]??0;out.push({...p,start:t});t+=p.duration;prev=scene;});return out;})();
+export const P=(id:string):Para=>{const p=PARAS.find(x=>x.id===id);if(!p)throw new Error('no paragraph '+id);return p;};
+export const E=(id:string)=>P(id).start+P(id).duration;
+export const END_VO=E(PARAS[PARAS.length-1].id);
+export const OUTRO={card:4.0,credits:8.0};
+export const TOTAL=END_VO+1.5+OUTRO.card+OUTRO.credits;
+const norm=(s:string)=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
+const ALIAS:Record<string,string>={azeglio:'azeglio',cavour:'cavour',garibaldi:'garibaldi',solferino:'sulfurino',marsala:'marsala',porta:'porta'};
+export const T=(id:string,word?:string,nth=1):number=>{const p=P(id);if(!word)return p.start;const target=ALIAS[norm(word)]??norm(word);let n=0;for(const w of p.words){const v=norm(w.w);if(v===target||v.startsWith(target)||target.startsWith(v)&&v.length>3){if(++n===nth)return p.start+w.s;}}console.warn('word not found',id,word);return p.start;};
+export const voActive=(t:number)=>PARAS.some(p=>t>=p.start-.15&&t<=p.start+p.duration+.25);
+export const SCENE_START=(n:number)=>P(`S${n}_01`).start;

@@ -1,0 +1,46 @@
+name: stills
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: Composition id
+        default: Main
+        required: true
+      frames:
+        description: Comma-separated frame numbers
+        default: "0,30,60,90,120,150,180,210,240,270,300,330"
+        required: true
+      scale:
+        description: Render scale (0.5 = 960x540)
+        default: "0.5"
+        required: true
+jobs:
+  stills:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx remotion browser ensure
+      - name: Render stills
+        run: |
+          mkdir -p out
+          IFS=',' read -ra FR <<< "${{ inputs.frames }}"
+          for f in "${FR[@]}"; do
+            npx remotion still src/index.ts "${{ inputs.composition }}" "out/f_$(printf %05d $f).png" --frame="$f" --scale="${{ inputs.scale }}" --log=error
+          done
+          ls -la out
+      - name: Contact sheet
+        run: |
+          sudo apt-get install -y -qq imagemagick >/dev/null
+          montage out/f_*.png -tile 3x -geometry +4+4 -background '#111' out/contact_sheet.jpg
+          convert out/contact_sheet.jpg -quality 85 out/contact_sheet.jpg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stills-${{ github.run_number }}
+          path: out/
+          retention-days: 7

@@ -1,0 +1,1495 @@
+[
+ {
+  "id": "S1_01",
+  "file": "audio/vo/p/S1_01.mp3",
+  "duration": 14.03,
+  "text": "After Napoleon's defeat, the Congress of Vienna redrew Italy in 1815. The peninsula was not one nation: Sardinia-Piedmont ruled from Turin; Austria held Lombardy and Venetia; dukes governed Parma, Modena, and Tuscany; the pope ruled central states; and the Bourbon kingdom controlled Naples and Sicily.",
+  "words": [
+   {
+    "w": "After",
+    "s": 0.0,
+    "e": 0.21
+   },
+   {
+    "w": "Napoleon's",
+    "s": 0.21,
+    "e": 0.59
+   },
+   {
+    "w": "defeat,",
+    "s": 0.59,
+    "e": 0.8
+   },
+   {
+    "w": "the",
+    "s": 1.2,
+    "e": 1.23
+   },
+   {
+    "w": "Congress",
+    "s": 1.23,
+    "e": 1.4
+   },
+   {
+    "w": "of",
+    "s": 1.4,
+    "e": 1.52
+   },
+   {
+    "w": "Vienna",
+    "s": 1.52,
+    "e": 1.68
+   },
+   {
+    "w": "redrew",
+    "s": 1.68,
+    "e": 1.97
+   },
+   {
+    "w": "Italy",
+    "s": 1.97,
+    "e": 2.16
+   },
+   {
+    "w": "in",
+    "s": 2.16,
+    "e": 2.31
+   },
+   {
+    "w": "1815.",
+    "s": 2.31,
+    "e": 2.85
+   },
+   {
+    "w": "The",
+    "s": 3.17,
+    "e": 3.2
+   },
+   {
+    "w": "peninsula",
+    "s": 3.2,
+    "e": 3.41
+   },
+   {
+    "w": "was",
+    "s": 3.41,
+    "e": 3.83
+   },
+   {
+    "w": "not",
+    "s": 3.83,
+    "e": 4.01
+   },
+   {
+    "w": "one",
+    "s": 4.01,
+    "e": 4.2
+   },
+   {
+    "w": "nation.",
+    "s": 4.2,
+    "e": 4.45
+   },
+   {
+    "w": "Sardinia",
+    "s": 4.89,
+    "e": 5.08
+   },
+   {
+    "w": "Piedmont",
+    "s": 5.08,
+    "e": 5.44
+   },
+   {
+    "w": "ruled",
+    "s": 5.44,
+    "e": 5.82
+   },
+   {
+    "w": "from",
+    "s": 5.82,
+    "e": 5.98
+   },
+   {
+    "w": "Turin.",
+    "s": 5.98,
+    "e": 6.28
+   },
+   {
+    "w": "Austria",
+    "s": 6.66,
+    "e": 6.87
+   },
+   {
+    "w": "held",
+    "s": 6.87,
+    "e": 7.26
+   },
+   {
+    "w": "Lombardy",
+    "s": 7.26,
+    "e": 7.52
+   },
+   {
+    "w": "and",
+    "s": 7.52,
+    "e": 7.7
+   },
+   {
+    "w": "Venetia.",
+    "s": 7.7,
+    "e": 8.04
+   },
+   {
+    "w": "Dukes",
+    "s": 8.43,
+    "e": 8.6
+   },
+   {
+    "w": "governed",
+    "s": 8.6,
+    "e": 8.97
+   },
+   {
+    "w": "Parma,",
+    "s": 8.97,
+    "e": 9.23
+   },
+   {
+    "w": "Modena",
+    "s": 9.53,
+    "e": 9.71
+   },
+   {
+    "w": "and",
+    "s": 9.71,
+    "e": 10.08
+   },
+   {
+    "w": "Tuscany.",
+    "s": 10.08,
+    "e": 10.31
+   },
+   {
+    "w": "The",
+    "s": 10.67,
+    "e": 10.74
+   },
+   {
+    "w": "Pope",
+    "s": 10.74,
+    "e": 10.9
+   },
+   {
+    "w": "ruled",
+    "s": 10.9,
+    "e": 11.3
+   },
+   {
+    "w": "central",
+    "s": 11.3,
+    "e": 11.56
+   },
+   {
+    "w": "states",
+    "s": 11.56,
+    "e": 11.79
+   },
+   {
+    "w": "and",
+    "s": 11.79,
+    "e": 12.25
+   },
+   {
+    "w": "the",
+    "s": 12.25,
+    "e": 12.33
+   },
+   {
+    "w": "Bourbon",
+    "s": 12.33,
+    "e": 12.48
+   },
+   {
+    "w": "Kingdom",
+    "s": 12.48,
+    "e": 12.74
+   },
+   {
+    "w": "controlled",
+    "s": 12.74,
+    "e": 13.08
+   },
+   {
+    "w": "Naples",
+    "s": 13.08,
+    "e": 13.27
+   },
+   {
+    "w": "and",
+    "s": 13.27,
+    "e": 13.56
+   },
+   {
+    "w": "Sicily.",
+    "s": 13.56,
+    "e": 13.73
+   }
+  ]
+ },
+ {
+  "id": "S1_02",
+  "file": "audio/vo/p/S1_02.mp3",
+  "duration": 13.79,
+  "text": "Revolution came in 1848, when uprisings challenged Austrian power in Milan and Venice. Defeat followed, but the idea of national unity survived. Piedmont's King Victor Emmanuel the Second kept a constitutional state; his minister, Camillo Cavour, built railways, strengthened the army, and sought allies abroad to weaken Austria.",
+  "words": [
+   {
+    "w": "Revolution",
+    "s": 0.0,
+    "e": 0.25
+   },
+   {
+    "w": "came",
+    "s": 0.25,
+    "e": 0.48
+   },
+   {
+    "w": "in",
+    "s": 0.48,
+    "e": 0.59
+   },
+   {
+    "w": "1848",
+    "s": 0.59,
+    "e": 1.15
+   },
+   {
+    "w": "when",
+    "s": 1.15,
+    "e": 1.51
+   },
+   {
+    "w": "uprisings",
+    "s": 1.51,
+    "e": 1.88
+   },
+   {
+    "w": "challenged",
+    "s": 1.88,
+    "e": 2.2
+   },
+   {
+    "w": "Austrian",
+    "s": 2.2,
+    "e": 2.46
+   },
+   {
+    "w": "power",
+    "s": 2.46,
+    "e": 2.71
+   },
+   {
+    "w": "in",
+    "s": 2.71,
+    "e": 2.86
+   },
+   {
+    "w": "Milan",
+    "s": 2.86,
+    "e": 3.03
+   },
+   {
+    "w": "and",
+    "s": 3.03,
+    "e": 3.16
+   },
+   {
+    "w": "Venice.",
+    "s": 3.16,
+    "e": 3.35
+   },
+   {
+    "w": "Defeat",
+    "s": 3.67,
+    "e": 3.86
+   },
+   {
+    "w": "followed,",
+    "s": 3.86,
+    "e": 4.12
+   },
+   {
+    "w": "but",
+    "s": 4.4,
+    "e": 4.57
+   },
+   {
+    "w": "the",
+    "s": 4.57,
+    "e": 4.64
+   },
+   {
+    "w": "idea",
+    "s": 4.64,
+    "e": 4.89
+   },
+   {
+    "w": "of",
+    "s": 4.89,
+    "e": 5.04
+   },
+   {
+    "w": "national",
+    "s": 5.04,
+    "e": 5.27
+   },
+   {
+    "w": "unity",
+    "s": 5.27,
+    "e": 5.53
+   },
+   {
+    "w": "survived.",
+    "s": 5.53,
+    "e": 6.01
+   },
+   {
+    "w": "Piedmont's",
+    "s": 6.36,
+    "e": 6.62
+   },
+   {
+    "w": "king,",
+    "s": 6.62,
+    "e": 6.77
+   },
+   {
+    "w": "Victor",
+    "s": 6.89,
+    "e": 7.02
+   },
+   {
+    "w": "Emmanuel",
+    "s": 7.02,
+    "e": 7.32
+   },
+   {
+    "w": "II,",
+    "s": 7.32,
+    "e": 7.63
+   },
+   {
+    "w": "kept",
+    "s": 7.86,
+    "e": 8.04
+   },
+   {
+    "w": "a",
+    "s": 8.04,
+    "e": 8.2
+   },
+   {
+    "w": "constitutional",
+    "s": 8.2,
+    "e": 8.53
+   },
+   {
+    "w": "state.",
+    "s": 8.53,
+    "e": 8.88
+   },
+   {
+    "w": "His",
+    "s": 9.19,
+    "e": 9.26
+   },
+   {
+    "w": "minister,",
+    "s": 9.26,
+    "e": 9.53
+   },
+   {
+    "w": "Camille",
+    "s": 9.81,
+    "e": 9.94
+   },
+   {
+    "w": "Cavour,",
+    "s": 9.94,
+    "e": 10.23
+   },
+   {
+    "w": "built",
+    "s": 10.48,
+    "e": 10.67
+   },
+   {
+    "w": "railways,",
+    "s": 10.67,
+    "e": 10.96
+   },
+   {
+    "w": "strengthened",
+    "s": 11.38,
+    "e": 11.55
+   },
+   {
+    "w": "the",
+    "s": 11.55,
+    "e": 11.7
+   },
+   {
+    "w": "army,",
+    "s": 11.7,
+    "e": 11.88
+   },
+   {
+    "w": "and",
+    "s": 12.08,
+    "e": 12.23
+   },
+   {
+    "w": "sought",
+    "s": 12.23,
+    "e": 12.38
+   },
+   {
+    "w": "allies",
+    "s": 12.38,
+    "e": 12.67
+   },
+   {
+    "w": "abroad",
+    "s": 12.67,
+    "e": 12.92
+   },
+   {
+    "w": "to",
+    "s": 12.92,
+    "e": 13.1
+   },
+   {
+    "w": "weaken",
+    "s": 13.1,
+    "e": 13.26
+   },
+   {
+    "w": "Austria.",
+    "s": 13.26,
+    "e": 13.56
+   }
+  ]
+ },
+ {
+  "id": "S2_01",
+  "file": "audio/vo/p/S2_01.mp3",
+  "duration": 13.53,
+  "text": "In 1859, Cavour secured French support against Austria. At Magenta and Solferino, allied armies forced Austria to surrender Lombardy, while Venetia remained under Habsburg rule. Central Italian states voted to join Piedmont. The map changed through both battle and diplomacy, yet the northern kingdom still faced a divided peninsula.",
+  "words": [
+   {
+    "w": "In",
+    "s": 0.0,
+    "e": 0.15
+   },
+   {
+    "w": "1859,",
+    "s": 0.15,
+    "e": 0.79
+   },
+   {
+    "w": "Cavour",
+    "s": 1.12,
+    "e": 1.25
+   },
+   {
+    "w": "secured",
+    "s": 1.25,
+    "e": 1.52
+   },
+   {
+    "w": "French",
+    "s": 1.52,
+    "e": 1.71
+   },
+   {
+    "w": "support",
+    "s": 1.71,
+    "e": 1.98
+   },
+   {
+    "w": "against",
+    "s": 1.98,
+    "e": 2.24
+   },
+   {
+    "w": "Austria.",
+    "s": 2.24,
+    "e": 2.59
+   },
+   {
+    "w": "At",
+    "s": 2.91,
+    "e": 3.0
+   },
+   {
+    "w": "Magenta",
+    "s": 3.0,
+    "e": 3.28
+   },
+   {
+    "w": "and",
+    "s": 3.28,
+    "e": 3.43
+   },
+   {
+    "w": "Sulfurino,",
+    "s": 3.43,
+    "e": 3.84
+   },
+   {
+    "w": "Allied",
+    "s": 4.36,
+    "e": 4.36
+   },
+   {
+    "w": "armies",
+    "s": 4.36,
+    "e": 4.58
+   },
+   {
+    "w": "forced",
+    "s": 4.58,
+    "e": 4.83
+   },
+   {
+    "w": "Austria",
+    "s": 4.83,
+    "e": 5.16
+   },
+   {
+    "w": "to",
+    "s": 5.16,
+    "e": 5.32
+   },
+   {
+    "w": "surrender",
+    "s": 5.32,
+    "e": 5.53
+   },
+   {
+    "w": "Lombardy,",
+    "s": 5.53,
+    "e": 5.88
+   },
+   {
+    "w": "while",
+    "s": 6.17,
+    "e": 6.29
+   },
+   {
+    "w": "Venetia",
+    "s": 6.29,
+    "e": 6.61
+   },
+   {
+    "w": "remained",
+    "s": 6.61,
+    "e": 6.82
+   },
+   {
+    "w": "under",
+    "s": 6.82,
+    "e": 7.05
+   },
+   {
+    "w": "Habsburg",
+    "s": 7.05,
+    "e": 7.38
+   },
+   {
+    "w": "rule.",
+    "s": 7.38,
+    "e": 7.59
+   },
+   {
+    "w": "Central",
+    "s": 7.94,
+    "e": 8.07
+   },
+   {
+    "w": "Italian",
+    "s": 8.07,
+    "e": 8.34
+   },
+   {
+    "w": "states",
+    "s": 8.34,
+    "e": 8.56
+   },
+   {
+    "w": "voted",
+    "s": 8.56,
+    "e": 8.78
+   },
+   {
+    "w": "to",
+    "s": 8.78,
+    "e": 8.93
+   },
+   {
+    "w": "join",
+    "s": 8.93,
+    "e": 9.09
+   },
+   {
+    "w": "Piedmont.",
+    "s": 9.09,
+    "e": 9.37
+   },
+   {
+    "w": "The",
+    "s": 9.66,
+    "e": 9.72
+   },
+   {
+    "w": "map",
+    "s": 9.72,
+    "e": 9.83
+   },
+   {
+    "w": "changed",
+    "s": 9.83,
+    "e": 10.1
+   },
+   {
+    "w": "through",
+    "s": 10.1,
+    "e": 10.33
+   },
+   {
+    "w": "both",
+    "s": 10.33,
+    "e": 10.45
+   },
+   {
+    "w": "battle",
+    "s": 10.45,
+    "e": 10.66
+   },
+   {
+    "w": "and",
+    "s": 10.66,
+    "e": 10.82
+   },
+   {
+    "w": "diplomacy,",
+    "s": 10.82,
+    "e": 11.12
+   },
+   {
+    "w": "yet",
+    "s": 11.32,
+    "e": 11.53
+   },
+   {
+    "w": "the",
+    "s": 11.53,
+    "e": 11.64
+   },
+   {
+    "w": "Northern",
+    "s": 11.64,
+    "e": 11.81
+   },
+   {
+    "w": "Kingdom",
+    "s": 11.81,
+    "e": 12.06
+   },
+   {
+    "w": "still",
+    "s": 12.06,
+    "e": 12.41
+   },
+   {
+    "w": "faced",
+    "s": 12.41,
+    "e": 12.62
+   },
+   {
+    "w": "a",
+    "s": 12.62,
+    "e": 12.79
+   },
+   {
+    "w": "divided",
+    "s": 12.79,
+    "e": 13.04
+   },
+   {
+    "w": "peninsula.",
+    "s": 13.04,
+    "e": 13.22
+   }
+  ]
+ },
+ {
+  "id": "S2_02",
+  "file": "audio/vo/p/S2_02.mp3",
+  "duration": 13.98,
+  "text": "In May 1860, Giuseppe Garibaldi sailed with roughly one thousand volunteers from Quarto. They landed at Marsala, won support across Sicily, and crossed to Naples. His southern campaign was dramatic, but unity required compromise: Garibaldi handed his conquests to Victor Emmanuel, whose forces had advanced through the Papal States.",
+  "words": [
+   {
+    "w": "In",
+    "s": 0.0,
+    "e": 0.16
+   },
+   {
+    "w": "May",
+    "s": 0.16,
+    "e": 0.33
+   },
+   {
+    "w": "1860,",
+    "s": 0.33,
+    "e": 0.89
+   },
+   {
+    "w": "Giuseppe",
+    "s": 1.3,
+    "e": 1.46
+   },
+   {
+    "w": "Garibaldi",
+    "s": 1.46,
+    "e": 1.8
+   },
+   {
+    "w": "sailed",
+    "s": 1.8,
+    "e": 2.07
+   },
+   {
+    "w": "with",
+    "s": 2.07,
+    "e": 2.28
+   },
+   {
+    "w": "roughly",
+    "s": 2.28,
+    "e": 2.51
+   },
+   {
+    "w": "1",
+    "s": 2.51,
+    "e": 2.71
+   },
+   {
+    "w": ",000",
+    "s": 2.71,
+    "e": 3.0
+   },
+   {
+    "w": "volunteers",
+    "s": 3.0,
+    "e": 3.32
+   },
+   {
+    "w": "from",
+    "s": 3.32,
+    "e": 3.53
+   },
+   {
+    "w": "Quarto.",
+    "s": 3.53,
+    "e": 3.81
+   },
+   {
+    "w": "They",
+    "s": 4.06,
+    "e": 4.12
+   },
+   {
+    "w": "landed",
+    "s": 4.12,
+    "e": 4.3
+   },
+   {
+    "w": "at",
+    "s": 4.3,
+    "e": 4.48
+   },
+   {
+    "w": "Marsala,",
+    "s": 4.48,
+    "e": 4.79
+   },
+   {
+    "w": "won",
+    "s": 5.08,
+    "e": 5.18
+   },
+   {
+    "w": "support",
+    "s": 5.18,
+    "e": 5.44
+   },
+   {
+    "w": "across",
+    "s": 5.44,
+    "e": 5.68
+   },
+   {
+    "w": "Sicily,",
+    "s": 5.68,
+    "e": 5.92
+   },
+   {
+    "w": "and",
+    "s": 6.19,
+    "e": 6.35
+   },
+   {
+    "w": "crossed",
+    "s": 6.35,
+    "e": 6.53
+   },
+   {
+    "w": "to",
+    "s": 6.53,
+    "e": 6.65
+   },
+   {
+    "w": "Naples.",
+    "s": 6.65,
+    "e": 6.81
+   },
+   {
+    "w": "His",
+    "s": 7.13,
+    "e": 7.23
+   },
+   {
+    "w": "southern",
+    "s": 7.23,
+    "e": 7.42
+   },
+   {
+    "w": "campaign",
+    "s": 7.42,
+    "e": 7.76
+   },
+   {
+    "w": "was",
+    "s": 7.76,
+    "e": 7.99
+   },
+   {
+    "w": "dramatic,",
+    "s": 7.99,
+    "e": 8.26
+   },
+   {
+    "w": "but",
+    "s": 8.46,
+    "e": 8.69
+   },
+   {
+    "w": "unity",
+    "s": 8.69,
+    "e": 8.97
+   },
+   {
+    "w": "required",
+    "s": 8.97,
+    "e": 9.32
+   },
+   {
+    "w": "compromise.",
+    "s": 9.32,
+    "e": 9.7
+   },
+   {
+    "w": "Garibaldi",
+    "s": 10.2,
+    "e": 10.46
+   },
+   {
+    "w": "handed",
+    "s": 10.46,
+    "e": 10.67
+   },
+   {
+    "w": "his",
+    "s": 10.67,
+    "e": 10.82
+   },
+   {
+    "w": "conquests",
+    "s": 10.82,
+    "e": 11.22
+   },
+   {
+    "w": "to",
+    "s": 11.22,
+    "e": 11.38
+   },
+   {
+    "w": "Victor",
+    "s": 11.38,
+    "e": 11.56
+   },
+   {
+    "w": "Emmanuel,",
+    "s": 11.56,
+    "e": 11.86
+   },
+   {
+    "w": "whose",
+    "s": 12.23,
+    "e": 12.34
+   },
+   {
+    "w": "forces",
+    "s": 12.34,
+    "e": 12.6
+   },
+   {
+    "w": "had",
+    "s": 12.6,
+    "e": 12.74
+   },
+   {
+    "w": "advanced",
+    "s": 12.74,
+    "e": 13.01
+   },
+   {
+    "w": "through",
+    "s": 13.01,
+    "e": 13.26
+   },
+   {
+    "w": "the",
+    "s": 13.26,
+    "e": 13.36
+   },
+   {
+    "w": "Papal",
+    "s": 13.36,
+    "e": 13.53
+   },
+   {
+    "w": "States.",
+    "s": 13.53,
+    "e": 13.68
+   }
+  ]
+ },
+ {
+  "id": "S3_01",
+  "file": "audio/vo/p/S3_01.mp3",
+  "duration": 13.4,
+  "text": "In March 1861, the Kingdom of Italy was proclaimed, with Victor Emmanuel the Second as king. Massimo d'Azeglio captured the unfinished task: We have made Italy; now we must make Italians. Venetia joined in 1866 after war with Austria, but Rome remained outside the kingdom, protected by French troops.",
+  "words": [
+   {
+    "w": "In",
+    "s": 0.0,
+    "e": 0.17
+   },
+   {
+    "w": "March",
+    "s": 0.17,
+    "e": 0.35
+   },
+   {
+    "w": "1861,",
+    "s": 0.35,
+    "e": 0.9
+   },
+   {
+    "w": "the",
+    "s": 1.5,
+    "e": 1.5
+   },
+   {
+    "w": "Kingdom",
+    "s": 1.5,
+    "e": 1.62
+   },
+   {
+    "w": "of",
+    "s": 1.62,
+    "e": 1.77
+   },
+   {
+    "w": "Italy",
+    "s": 1.77,
+    "e": 1.94
+   },
+   {
+    "w": "was",
+    "s": 1.94,
+    "e": 2.09
+   },
+   {
+    "w": "proclaimed,",
+    "s": 2.09,
+    "e": 2.39
+   },
+   {
+    "w": "with",
+    "s": 2.68,
+    "e": 2.79
+   },
+   {
+    "w": "Victor",
+    "s": 2.79,
+    "e": 3.0
+   },
+   {
+    "w": "Emmanuel",
+    "s": 3.0,
+    "e": 3.28
+   },
+   {
+    "w": "II",
+    "s": 3.28,
+    "e": 3.54
+   },
+   {
+    "w": "as",
+    "s": 3.54,
+    "e": 3.86
+   },
+   {
+    "w": "king.",
+    "s": 3.86,
+    "e": 4.04
+   },
+   {
+    "w": "Massimo",
+    "s": 4.48,
+    "e": 4.66
+   },
+   {
+    "w": "d",
+    "s": 4.66,
+    "e": 4.75
+   },
+   {
+    "w": "'Azaglio",
+    "s": 4.75,
+    "e": 5.04
+   },
+   {
+    "w": "captured",
+    "s": 5.04,
+    "e": 5.47
+   },
+   {
+    "w": "the",
+    "s": 5.47,
+    "e": 5.61
+   },
+   {
+    "w": "unfinished",
+    "s": 5.61,
+    "e": 5.87
+   },
+   {
+    "w": "task.",
+    "s": 5.87,
+    "e": 6.13
+   },
+   {
+    "w": "We",
+    "s": 6.48,
+    "e": 6.54
+   },
+   {
+    "w": "have",
+    "s": 6.54,
+    "e": 6.64
+   },
+   {
+    "w": "made",
+    "s": 6.64,
+    "e": 6.79
+   },
+   {
+    "w": "Italy,",
+    "s": 6.79,
+    "e": 7.02
+   },
+   {
+    "w": "now",
+    "s": 7.29,
+    "e": 7.49
+   },
+   {
+    "w": "we",
+    "s": 7.49,
+    "e": 7.67
+   },
+   {
+    "w": "must",
+    "s": 7.67,
+    "e": 7.76
+   },
+   {
+    "w": "make",
+    "s": 7.76,
+    "e": 7.93
+   },
+   {
+    "w": "Italians.",
+    "s": 7.93,
+    "e": 8.27
+   },
+   {
+    "w": "Venetia",
+    "s": 8.64,
+    "e": 8.86
+   },
+   {
+    "w": "joined",
+    "s": 8.86,
+    "e": 9.08
+   },
+   {
+    "w": "in",
+    "s": 9.08,
+    "e": 9.18
+   },
+   {
+    "w": "1866",
+    "s": 9.18,
+    "e": 9.91
+   },
+   {
+    "w": "after",
+    "s": 9.91,
+    "e": 10.1
+   },
+   {
+    "w": "war",
+    "s": 10.1,
+    "e": 10.25
+   },
+   {
+    "w": "with",
+    "s": 10.25,
+    "e": 10.38
+   },
+   {
+    "w": "Austria,",
+    "s": 10.38,
+    "e": 10.67
+   },
+   {
+    "w": "but",
+    "s": 10.92,
+    "e": 11.06
+   },
+   {
+    "w": "Rome",
+    "s": 11.06,
+    "e": 11.24
+   },
+   {
+    "w": "remained",
+    "s": 11.24,
+    "e": 11.5
+   },
+   {
+    "w": "outside",
+    "s": 11.5,
+    "e": 11.79
+   },
+   {
+    "w": "the",
+    "s": 11.79,
+    "e": 11.94
+   },
+   {
+    "w": "kingdom,",
+    "s": 11.94,
+    "e": 12.12
+   },
+   {
+    "w": "protected",
+    "s": 12.36,
+    "e": 12.56
+   },
+   {
+    "w": "by",
+    "s": 12.56,
+    "e": 12.77
+   },
+   {
+    "w": "French",
+    "s": 12.77,
+    "e": 12.93
+   },
+   {
+    "w": "troops.",
+    "s": 12.93,
+    "e": 13.12
+   }
+  ]
+ },
+ {
+  "id": "S3_02",
+  "file": "audio/vo/p/S3_02.mp3",
+  "duration": 14.13,
+  "text": "In September 1870, Italian troops entered Rome through the breach at Porta Pia after France withdrew its garrison. Rome became the capital in 1871, completing political unification, not resolving every regional divide. The borders now formed one kingdom, while language, loyalties, and daily life still differed across the peninsula.",
+  "words": [
+   {
+    "w": "In",
+    "s": 0.0,
+    "e": 0.17
+   },
+   {
+    "w": "September",
+    "s": 0.17,
+    "e": 0.41
+   },
+   {
+    "w": "1870,",
+    "s": 0.41,
+    "e": 0.9
+   },
+   {
+    "w": "Italian",
+    "s": 1.42,
+    "e": 1.56
+   },
+   {
+    "w": "troops",
+    "s": 1.56,
+    "e": 1.72
+   },
+   {
+    "w": "entered",
+    "s": 1.72,
+    "e": 1.99
+   },
+   {
+    "w": "Rome",
+    "s": 1.99,
+    "e": 2.18
+   },
+   {
+    "w": "through",
+    "s": 2.18,
+    "e": 2.35
+   },
+   {
+    "w": "the",
+    "s": 2.35,
+    "e": 2.43
+   },
+   {
+    "w": "breach",
+    "s": 2.43,
+    "e": 2.57
+   },
+   {
+    "w": "at",
+    "s": 2.57,
+    "e": 2.71
+   },
+   {
+    "w": "Porta",
+    "s": 2.71,
+    "e": 2.87
+   },
+   {
+    "w": "Pia",
+    "s": 2.87,
+    "e": 3.05
+   },
+   {
+    "w": "after",
+    "s": 3.05,
+    "e": 3.32
+   },
+   {
+    "w": "France",
+    "s": 3.32,
+    "e": 3.55
+   },
+   {
+    "w": "withdrew",
+    "s": 3.55,
+    "e": 3.73
+   },
+   {
+    "w": "its",
+    "s": 3.73,
+    "e": 3.89
+   },
+   {
+    "w": "garrison.",
+    "s": 3.89,
+    "e": 4.14
+   },
+   {
+    "w": "Rome",
+    "s": 4.45,
+    "e": 4.54
+   },
+   {
+    "w": "became",
+    "s": 4.54,
+    "e": 4.75
+   },
+   {
+    "w": "the",
+    "s": 4.75,
+    "e": 4.88
+   },
+   {
+    "w": "capital",
+    "s": 4.88,
+    "e": 5.11
+   },
+   {
+    "w": "in",
+    "s": 5.11,
+    "e": 5.29
+   },
+   {
+    "w": "1871,",
+    "s": 5.29,
+    "e": 5.99
+   },
+   {
+    "w": "completing",
+    "s": 6.3,
+    "e": 6.59
+   },
+   {
+    "w": "political",
+    "s": 6.59,
+    "e": 6.89
+   },
+   {
+    "w": "unification,",
+    "s": 6.89,
+    "e": 7.37
+   },
+   {
+    "w": "not",
+    "s": 7.73,
+    "e": 7.89
+   },
+   {
+    "w": "resolving",
+    "s": 7.89,
+    "e": 8.19
+   },
+   {
+    "w": "every",
+    "s": 8.19,
+    "e": 8.38
+   },
+   {
+    "w": "regional",
+    "s": 8.38,
+    "e": 8.62
+   },
+   {
+    "w": "divide.",
+    "s": 8.62,
+    "e": 8.88
+   },
+   {
+    "w": "The",
+    "s": 9.15,
+    "e": 9.21
+   },
+   {
+    "w": "borders",
+    "s": 9.21,
+    "e": 9.4
+   },
+   {
+    "w": "now",
+    "s": 9.4,
+    "e": 9.62
+   },
+   {
+    "w": "formed",
+    "s": 9.62,
+    "e": 9.86
+   },
+   {
+    "w": "one",
+    "s": 9.86,
+    "e": 10.09
+   },
+   {
+    "w": "kingdom,",
+    "s": 10.09,
+    "e": 10.34
+   },
+   {
+    "w": "while",
+    "s": 10.63,
+    "e": 10.82
+   },
+   {
+    "w": "language,",
+    "s": 10.82,
+    "e": 11.09
+   },
+   {
+    "w": "loyalties,",
+    "s": 11.49,
+    "e": 11.7
+   },
+   {
+    "w": "and",
+    "s": 12.01,
+    "e": 12.08
+   },
+   {
+    "w": "daily",
+    "s": 12.08,
+    "e": 12.26
+   },
+   {
+    "w": "life",
+    "s": 12.26,
+    "e": 12.49
+   },
+   {
+    "w": "still",
+    "s": 12.49,
+    "e": 12.92
+   },
+   {
+    "w": "differed",
+    "s": 12.92,
+    "e": 13.18
+   },
+   {
+    "w": "across",
+    "s": 13.18,
+    "e": 13.55
+   },
+   {
+    "w": "the",
+    "s": 13.55,
+    "e": 13.71
+   },
+   {
+    "w": "peninsula.",
+    "s": 13.71,
+    "e": 13.84
+   }
+  ]
+ }
+]

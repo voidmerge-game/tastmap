@@ -1,0 +1,172 @@
+name: render_parallel
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: Composition id
+        default: Main
+        required: true
+      scale:
+        description: Render scale (1 = 1920x1080)
+        default: "1"
+        required: true
+      crf:
+        description: x264 CRF quality (lower = better)
+        default: "18"
+        required: true
+      chunks:
+        description: Number of parallel video chunks
+        default: "10"
+        required: true
+      out_name:
+        description: Final file name
+        default: the_unification_of_italy_1815-1871_1080p.mp4
+        required: true
+      reuse_video_run_id:
+        description: Reuse video chunk artifacts from this run id (empty = render video)
+        default: ""
+        required: false
+      reuse_audio_run_id:
+        description: Reuse audio chunk artifacts from this run id (empty = render audio)
+        default: ""
+        required: false
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      total: ${{ steps.plan.outputs.total }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - id: plan
+        run: |
+          npx tsx scripts/plan_chunks.ts "${{ inputs.chunks }}" > plan.json
+          cat plan.json
+          echo "matrix=$(python3 -c 'import json;print(json.dumps(json.load(open("plan.json"))["matrix"]))')" >> "$GITHUB_OUTPUT"
+          echo "total=$(python3 -c 'import json;print(json.load(open("plan.json"))["total"])')" >> "$GITHUB_OUTPUT"
+  video:
+    needs: plan
+    if: ${{ inputs.reuse_video_run_id == '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx remotion browser ensure
+      - name: Render video chunk
+        run: |
+          mkdir -p out
+          npx remotion render src/index.ts "${{ inputs.composition }}" "out/chunk_${{ matrix.idx }}.mp4" \
+            --frames="${{ matrix.range }}" --muted --scale="${{ inputs.scale }}" --crf="${{ inputs.crf }}" \
+            --codec=h264 --concurrency=4 --image-format=jpeg --jpeg-quality=95 --timeout=120000 --log=info
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chunk_${{ matrix.idx }}
+          path: out/chunk_${{ matrix.idx }}.mp4
+          retention-days: 3
+  audio:
+    needs: plan
+    if: ${{ inputs.reuse_audio_run_id == '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx remotion browser ensure
+      - name: Render audio chunk
+        run: |
+          mkdir -p out
+          npx remotion render src/index.ts "${{ inputs.composition }}" "out/audio_${{ matrix.idx }}.wav" \
+            --frames="${{ matrix.range }}" --codec=wav --concurrency=4 --timeout=120000 --log=info
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio_${{ matrix.idx }}
+          path: out/audio_${{ matrix.idx }}.wav
+          retention-days: 3
+  stitch:
+    needs:
+      - plan
+      - video
+      - audio
+    if: ${{ always() && needs.plan.result == 'success' && (needs.audio.result == 'success' || needs.audio.result == 'skipped') && (needs.video.result == 'success' || needs.video.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download audio chunks (this run)
+        if: ${{ inputs.reuse_audio_run_id == '' }}
+        uses: actions/download-artifact@v4
+        with:
+          pattern: audio_*
+          path: parts
+      - name: Download audio chunks (previous run)
+        if: ${{ inputs.reuse_audio_run_id != '' }}
+        uses: actions/download-artifact@v4
+        with:
+          pattern: audio_*
+          path: parts
+          run-id: ${{ inputs.reuse_audio_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download video chunks (this run)
+        if: ${{ inputs.reuse_video_run_id == '' }}
+        uses: actions/download-artifact@v4
+        with:
+          pattern: chunk_*
+          path: parts
+      - name: Download video chunks (previous run)
+        if: ${{ inputs.reuse_video_run_id != '' }}
+        uses: actions/download-artifact@v4
+        with:
+          pattern: chunk_*
+          path: parts
+          run-id: ${{ inputs.reuse_video_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Concat and mux
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+          ls -R parts
+          N=$(ls -d parts/chunk_* | wc -l)
+          : > vlist.txt
+          : > alist.txt
+          for i in $(seq 0 $((N-1))); do echo "file 'parts/chunk_$i/chunk_$i.mp4'" >> vlist.txt; echo "file 'parts/audio_$i/audio_$i.wav'" >> alist.txt; done
+          cat vlist.txt alist.txt
+          ffmpeg -y -f concat -safe 0 -i vlist.txt -c copy video_only.mp4
+          ffmpeg -y -f concat -safe 0 -i alist.txt -c copy audio_full.wav
+          VD=$(ffprobe -v error -show_entries format=duration -of csv=p=0 video_only.mp4)
+          ffprobe -v error -show_entries format=duration -of default=nw=1 audio_full.wav
+          mkdir -p out
+          ffmpeg -y -i video_only.mp4 -i audio_full.wav -map 0:v:0 -map 1:a:0 -c:v copy -af apad -t "$VD" -c:a aac -b:a 256k -ar 48000 -movflags +faststart "out/${{ inputs.out_name }}"
+          ffprobe -v error -show_entries format=duration:stream=codec_name,width,height,nb_frames -of default=nw=1 "out/${{ inputs.out_name }}"
+          ls -la out
+      - name: Upload to Google Drive
+        env:
+          URI: ${{ secrets.DRIVE_UPLOAD_URI }}
+        run: |
+          if [ -z "$URI" ]; then echo "::warning::DRIVE_UPLOAD_URI secret not set, skipping"; exit 0; fi
+          python3 scripts/drive_upload.py "out/${{ inputs.out_name }}" "$URI"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: final
+          path: out/${{ inputs.out_name }}
+          retention-days: 7
