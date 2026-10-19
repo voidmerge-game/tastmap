@@ -5,7 +5,7 @@ import {YEARS} from '../events';
 import {clamp01, easeOutCubic} from '../lib/anim';
 
 /* =====================================================================================
- *  v6 extras: 3D title, live timeline ribbon, 1914 share chart, filmic grade
+ *  v6 extras: 3D title, live timeline ribbon, 1815 share chart, filmic grade
  * ===================================================================================== */
 
 /* ---------- 3D extruded title with a light sweep ---------- */
@@ -95,7 +95,7 @@ export const TimelineRibbon: React.FC<{t: number; from: number; until: number}> 
 };
 
 /* ---------- area shares of the Italian polities in 1815; spherical areas measured from italy_1815.json ---------- */
-export const SHARES_1914: {power: string; label: string; pct: number; color: string}[] = [
+export const SHARES_1815: {power: string; label: string; pct: number; color: string}[] = [
   {power: 'twosicilies', label: 'TWO SICILIES', pct: 33.1, color: '#b47a70'},
   {power: 'sardinia', label: 'SARDINIA-PIEDMONT', pct: 24.3, color: '#6f93a8'},
   {power: 'austria', label: 'LOMBARDY–VENETIA', pct: 16.1, color: '#8c8a7a'},
@@ -111,7 +111,7 @@ export const ShareChart: React.FC<{t: number; from: number; until: number}> = ({
   const grow = easeOutCubic(clamp01((t - from - 0.3) / 2.2));
   const barW = CHART.w - 20, barH = 44;
   let acc = 0;
-  const segs = SHARES_1914.map((s) => { const x0 = acc; acc += s.pct; return {...s, x0}; });
+  const segs = SHARES_1815.map((s) => { const x0 = acc; acc += s.pct; return {...s, x0}; });
   const shown = grow * 100;
   return (
     <div style={{position: 'absolute', left: CHART.x, top: CHART.y, width: CHART.w, height: CHART.h, opacity: Math.max(0, op)}}>

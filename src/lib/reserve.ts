@@ -4,7 +4,7 @@ import type {Rect} from './labels';
 export type Reserved=Rect&{t0:number;t1:number;id:string;v0:number;v1:number};
 const PAD=18,LEAD=.45;
 export const RIBBON_WIN={t0:FIRST_VO,t1:END_VO+1.5};
-export const CHART_WIN={t0:T('S3_02','capital')-.3,t1:E('S3_02')+.8};
+export const CHART_WIN={t0:T('S3_02','capital')-2.5,t1:END_VO+2.5};
 export const reservedAt=(tSec:number):Reserved[]=>{
  const out:Reserved[]=[];
  for(const a of ARCHIVE){if(a.wall)continue;const t0=a.t-LEAD,t1=a.until+LEAD;if(tSec<t0||tSec>t1)continue;const x=a.x??1080,y=a.y??150,w=a.w??720,h=a.h??540;out.push({id:a.src,x:x-PAD,y:y-PAD,w:w+2*PAD,h:h+2*PAD,t0,t1,v0:a.t,v1:a.until});}
